@@ -1,35 +1,29 @@
-# Here is a look at the top 10 investment avenues Indians look at while savings for their financial goals :
-&nbsp;
 
-#### 1. Direct equity
-* Investing in stocks may not be everyone's cup of tea as it's a volatile asset class and there is no guarantee of returns. Further, not only is it difficult to pick the right stock, timing your entry and exit is also not easy. The only silver lining is that over long periods, equity has been able to deliver higher than inflation-adjusted returns compared to all other asset classes. At the same time, the risk of losing a considerable portion of capital is high unless one opts for stop-loss method to curtail losses. In stop-loss, one places an advance order to sell a stock at a specific price. To reduce the risk to certain extent, you could diversify across sectors and market capitalisations. Currently, the 1-, 3-, 5 year market returns are around 13 percent, 8 percent and 12.5 percent, respectively. To invest in direct equities, one needs to open a demat account. 
+## Types of Investment
 
-   
-#### 2. Equity mutual funds
-* Equity mutual funds predominantly invest in equity stocks. As per current Securities and Exchange Board of India (Sebi) Mutual Fund Regulations, an equity mutual fund scheme must invest at least 65 percent of its assets in equities and equity-related instruments. An equity fund can be actively managed or passively managed. In an actively traded fund, the returns are largely dependent on a fund manager's ability to generate returns. Index funds and exchange-traded fund (ETFs) are passively managed, and these track the underlying index. Equity schemes are categorised according to market-capitalisation or the sectors in which they invest. They are also categorised by whether they are domestic (investing in stocks of only Indian companies) or international (investing in stocks of overseas companies). Currently, the 1-, 3-, 5-year market return is around 15 percent, 15 percent, and 20 percent, respectively. Read more about equity mutual funds.
+#### Bonds
+           
+           
+ * bond is a fixed income investment in which an investor loans money to an entity (typically corporate or governmental) which borrows the funds for a defined period of time at a variable or fixed interest rate. Bonds are used by companies, municipalities, states and sovereign governments to raise money and finance a variety of projects and activities.
 
-#### 3. Debt mutual funds
+#### Stocks
+* A stock is a general term used to describe the ownership certificates of any company. A share, on the other hand, refers to the stock certificate of a particular company. Holding a particular company's share makes you a shareholder.
+#### Employees Provident Fund
+   * Employees Provident Fund is another small savings scheme that is primarily offered by your employer. This includes salaried individuals of both private and public organizations. Any company with a workforce of more than 20 employees is mandated to register for the EPF scheme. Around 12% each month is deducted from the salary and contributed towards the EPF account of an employee. This EPF account is maintained by the Employees Provident Fund Organization, commonly known as the EPFO. The amount deposited towards EPF is eligible for tax exemption under section 80C of the Income Tax Act.
+   #### Sukanya Samriddhi Scheme
+* Sukanya Samriddhi Yojana is a special scheme which has been launched by the central government to facilitate the financial wellbeing of girl child in the country. This scheme can be availed by parents or legal guardian of a girl child and an amount as low as Rs.1000 per annum can be deposited under the scheme. The account matures only after the girl child reaches the age of 21. Premature withdrawal is allowed only after the girl reaches the age of 18 years and has financial need pertaining to wedding or education
 
-* Debt funds are ideal for investors who want steady returns. They are are less volatile and, hence, less risky compared to equity funds. Debt mutual funds primarily invest in fixed-interest generating securities like corporate bonds, government securities, treasury bills, commercial paper and other money market instruments. Currently, the 1-, 3-, 5-year market return is around 6.5 percent, 8 percent, and 7.5 percent, respectively.Read more about debt mutual funds.
+####  National Pension Scheme
+* The National Pension Scheme or NPS is a Government backed voluntary saving scheme that aims at inculcating saving habits for retirement amongst the citizens. It is designed to encourage systematic saving during the subscriber’s working life with an aim to offer old-age income or fixed retirement income to all the citizens of India, even NRIs.
+####  Mutual Funds  
+* A mutual fund is an instrument that pools money from a large number of investors, and invests that money in a number of securities.Investments in securities are usually spread across a wide cross-section of industries and sectors, and so the risk is diversified because all stocks may not move in the same direction in the same proportion at the same time. Mutual funds issue units to the investors in proportion with the amount of money invested by them. The profits or losses are also shared by investors in proportion to their investments.
+#### Fixed Deposits
+* Fixed Deposit is one of the simplest and most used Investment product in India.Fixed Deposits are bank deposits for a fixed or specified period chosen by investor or depositor at a fixed rate of interest. You can deposit money for as short a period as 7 days and upto 10 years. When you open a fixed deposit with the bank then you are lending money to the bank and it pays you interest. As interest rate and time period are fixed this investment product is called as Fixed Deposit. Interest rates are subject to change from time to time. Interest of FD varies based on the time period, the amount which is deposited. Most of the banks offer higher interest rate(0.5% more) to Senior Citizens.   
+#### Real Estate
+* Property rates are soaring with every passing day which has made real estate a hot investment avenue for investors. Buying, selling and leasing of property offers substantial returns to investors. Appreciation of property makes real estate a good investment tool. With urbanization gaining ground rapidly, real estate prices in certain major cities like Mumbai, Bangalore, New Delhi, are skyrocketing. 
+#### Gold
+* Gold fund, as the name suggests, invests in various forms of gold. It can be in the form of physical gold or stocks of gold mining companies
 
-#### 4.National Pension System (NPS)
+* gold Mining Funds: These funds invest in gold mining companies and returns from such funds are dependent on the performance of these companies. Investment demand for gold is borne out of the economic uncertainties as gold is considered to be a safe heaven when equity markets are tumbling. Dichotomy between demand and supply also govern the gold prices.
 
-* The National Pension System (NPS) is a long term retirement - focused investment product managed by the Pension Fund Regulatory and Development Authority (PFRDA). The minimum annual (April-March) contribution for an NPS Tier-1 account to remain active has been reduced from Rs 6,000 to Rs 1,000. It is a mix of equity, fixed deposits, corporate bonds, liquid funds and government funds, among others.Based on your risk appetite, you can decide how much of your money can be invested in equities through NPS. Currently, the 1-,3-,5-year market return for Fund option E is around 9.5 percent, 8.5 percent, and 11 percent, respectively.
-#### 5. Public Provident Fund (PPF)
-
-* The Public Provident Fund (PPF) is one product a lot of people turn to. Since the PPF has a long tenure of 15 years, the impact of compounding of tax-free interest is huge, especially in the later years. Further, since the interest earned and the principal invested is backed by sovereign guarantee, it makes it a safe investment. Read more about PPF.
-#### 6. Bank fixed deposit (FD)
-
-* A bank fixed deposit (FD) is a safe choice for investing in India. Under the deposit insurance and credit guarantee corporation (DICGC) rules, each depositor in a bank is insured up to a maximum of Rs 1 lakh for both principal and interest amount. As per the need, one may opt for monthly, quarterly, half-yearly, yearly or cumulative interest option in them. The interest rate earned is added to one's income and is taxed as per one's income slab. Read more about bank fixed deposit.
-#### 7. Senior Citizens' Saving Scheme (SCSS)
-
-* Probably the first choice of most retirees, the Senior Citizens' Saving Scheme (SCSS) is a must-have in their investment portfolios. As the name suggests, only senior citizens or early retirees can invest in this scheme. SCSS can be availed from a post office or a bank by anyone above 60. SCSS has a five-year tenure, which can be further extended by three years once the scheme matures. Currently, the interest rate that can be earned on SCSS is 8.3 per cent per annum, payable quarterly and is fully taxable. The upper investment limit is Rs 15 lakh, and one may open more than one account. Read more about Senior Citizens' Saving Scheme.
-#### 8. RBI Taxable Bonds
-
-* The government has replaced the erstwhile 8 percent Savings (Taxable) Bonds 2003 with the 7.75 per cent Savings (Taxable) Bonds. These bonds come with a tenure of 7 years. The bonds may be issued in demat form and credited to the Bond Ledger Account (BLA) of the investor and a Certificate of Holding is given to the investor as proof of investment. Read more about RBI Taxable Bonds.
-#### 9. Real Estate
-
-* The house that you live in is for self-consumption and should never be considered as an investment. If you do not intend to live in it, the second property you buy can be your investment. The location of the property is the single most important factor that will determine the value of your property and also the rental that it can earn. Investments in real estate deliver returns in two ways - capital appreciation and rentals.However, unlike other asset classes, real estate is highly illiquid. The other big risk is with getting the necessary regulatory approvals, which has largely been addressed after coming of the real estate regulator. Read more about real estate.
-#### 10. Gold
-
-* Possessing gold in the form of jewellery has its own concerns like safety and high cost. Then there's the 'making charges', which typically range between 6-14 per cent of the cost of gold (and may go as high as 25 percent in case of special designs). For those who would want to buy gold coins, there's still an option. One can also buy ingeniously minted coins. An alternate way of owning paper gold in a more cost-effective manner is through gold ETFs. Such investment (buying and selling) happens on a stock exchange (NSE or BSE) with gold as the underlying asset. Investing in Sovereign Gold Bonds is another option to own paper-gold. Read more about sovereign gold bonds.
+* Gold ETFs: Gold ETFs are exchange traded funds where the underlying asset is gold. Therefore, value of gold ETF depends upon the price of gold. One needs a demat account to invest in an ETF. The concept of gold ETFs in India was first introduced by Benchmark Asset Management Company, in India.
