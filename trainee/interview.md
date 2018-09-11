@@ -57,13 +57,15 @@
     *Through puzzles.*
   - Scalability of the Programs.
   - Attitude and willingness to learn.
-    * Courses we are interested to learn in future.*
+    *Courses we are interested to learn in future.*
   - Analytical Skills.
     *Based on our aptitude MCQs.*
   - Logic and ability to explain project.
   - Technical logic.
   - Approach to solve a problem.
  - How interest originated in candidate.
+ *what made you join in VIT?*
+ *why did you join in this course?*
 
 **What was in candidate’s mind while giving interview?**
 - Why questions has been stressed more on Mathematics ?
