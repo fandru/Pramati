@@ -64,8 +64,7 @@
   - Technical logic.
   - Approach to solve a problem.
  *How interest originated in candidate*
- *what made you join in VIT?*
- *why did you join in this course?*
+
 
 **What was in candidate’s mind while giving interview?**
 - Why questions has been stressed more on Mathematics ?
