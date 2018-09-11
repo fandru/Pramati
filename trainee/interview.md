@@ -63,7 +63,7 @@
   - Logic and ability to explain project.
   - Technical logic.
   - Approach to solve a problem.
- - How interest originated in candidate.
+ *How interest originated in candidate*
  *what made you join in VIT?*
  *why did you join in this course?*
 
