@@ -1,6 +1,5 @@
-                                    #### Talend
 
-
+### Talend
 #### What is the tool about
 
 * Talend is an enterprise data integration software vendor. 
