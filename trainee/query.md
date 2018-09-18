@@ -55,3 +55,9 @@
 ##### List of employees who has joined in Jan/Feb and Nov
 
  * select name from employee WHERE to_char(joining_date, 'mm') = '02'OR to_char(joining_date, 'mm') = '01'OR to_char(joining_date, 'mm') = '11';
+ 
+ 
+ 
+ ##### Replacing null values as NA
+ * select emp_id,COALESCE(cast(mgr_id as varchar),'NA') as mid,salary,joining_date from employee;
+
