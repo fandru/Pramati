@@ -3,7 +3,7 @@
 
 ##### Employee_Name and Manager_Name
       
-* select e.name as "Employee name",m.name as "Manager name" from employee e ,employee m where m.emp_id=e.mgr_id;
+*  select e.name as "Employee name",m.name as "Manager name" from employee e ,employee m where m.emp_id=e.mgr_id;
 
 
 #####  Employee name, emp doj, manager name, manger doj
@@ -22,19 +22,19 @@
 
 ##### List of terminated manager names
 
-* select distinct b.name AS manager_names from employee a,employee b where a.mgr_id=b.emp_id and b.termination_date
+* select distinct b.name AS manager_names from employee a,employee b where a.mgr_id=b.emp_id and b.termination_date IS NOT NULL;
 
 ##### List of department names where we have a terminated employee
 
-* select distinct ad.name Dept_name from employee a,employee b,dept ad,dept bd where a.mgr_id=b.emp_id and b.termination_date
-
+* select distinct d.name as "Department name" from dept d, employee e where d.dept_id=e.dept_id and e.termination_date is not null;
 ##### List of department names where we have a terminated Manager
 
 * select distinct d.name as "Department name" from dept d, employee e where d.dept_id=e.dept_id and e.termination_date is not null;
 
 ##### List of employees whose manager's salary is less then employee salary
 
-* SELECT a.name AS "Emp_Name" FROM employee a, employee b WHERE b.emp_id = a.mgr_id and b.salary
+* SELECT a.name AS "Emp_Name" FROM employee a, employee b WHERE b.emp_id = a.mgr_id and b.salary<a.salary;
+
 
 ##### List of employees whose doj is earlier than manager
 
@@ -46,7 +46,7 @@
 
 ##### List of employees whose name has a vowel
 
-* SELECT nameFROM employeeWHERE name LIKE '%A%'OR name LIKE '%E%'OR name LIKE '%I%'OR name LIKE '%O%'OR name LIKE '%U%'OR name LIKE '%a%'OR name LIKE '%e%'OR name LIKE '%i%'OR name LIKE '%o%'OR name LIKE '%u%'
+* SELECT name FROM employee WHERE name LIKE '%A%'OR name LIKE '%E%'OR name LIKE '%I%'OR name LIKE '%O%'OR name LIKE '%U%'OR name LIKE '%a%'OR name LIKE '%e%'OR name LIKE '%i%'OR name LIKE '%o%'OR name LIKE '%u%'
 
 ##### List of employees whose's manager name has a vowel and employee salary is less than 20000
 
