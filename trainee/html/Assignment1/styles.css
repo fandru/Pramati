@@ -1,101 +1,137 @@
-	 <style>	   
-		   body{
-		   
-		  padding:2em;
-		   width:1000px;
-		   margin:2px auto;
-		   }
-		   
-	   
-	   .logo {
-	   
-	   float:left;
-	  
-	   }
-	   
-	   .icon_sprite {
-		  
-		   float:right;
-	   
-	   }
-	    .links{
-		  
-		   float:right;
-	   
-	   }
-
-	   div {
-		   
-		   
-		   padding:6px;
-	   }
-	 
-	   .c1 {
-		   
-		   float:left;
-		   width:25%;
-		  <--text-align:justify;-->
-		    padding:1em;
-	   }
-	   .c2{
-		   display:block;
-		   float:left;
-		    width:30%;
-		    border-left:2px dotted #333;
-		  
-		    <!--text-align:justify;-->
-		    padding:3em;
-	   } 
-	   
-	   .c3 {display:block;
-		    padding:5px;
-		    background-color: #99994d;	
-		   float:right;
-	 height: 245px;
-	    width: 38%;
-
-		   border: 3px solid #333;
-		   
-	   }
-
-	   .group
-	   {
-	   	border-bottom: 2px dotted black;
-	   	height: 300px;
-	   }
-	   
-	   h3{
-		   
-		 color:green;
-		 padding:0;
-		 margin:0;
-		   
-	   }
-	 p{
-		  font-size: 11px;
-		  padding:0;
-		  margin:0;
-	  }
-	  li
-	  {
-		  width: 70%;
-	     text-align: center;
-		  
-		  list-style-image: url('bullet.png');
-	  }
-	  
-
-	 .banner_image {
+		 	   
+				   body{
+				   
+				  padding:2em;
+				   width:100%;
+				   margin:2px auto;
+				   }
+				   
 			   
-			  border-top:2px dotted #333;
+			   .logo {
 			   
-			   border-bottom:2px dotted #333;
-		   }
-		   .why_html{
+			   float:left;
+			   padding-left: 25px;
+			  
+			   }
+			   .overflows{
+			   	overflow:auto;
+			   }
+			   
+			   .icon_sprite {
+				  
+				   float:right;
+				   padding-right: 70px;
+			   
+			   }
+			   .cometo{  padding:0;  margin: 0;padding-right: 40px;float:right;}
+			   .home{   padding-right:20px;   padding-left:20px;   border-right:1px solid black;}
+			   .idea{   padding-right:20px;   padding-left:20px;   border-right:1px solid black;}
+			   .about{   padding-right:15px;   padding-left:20px;}
+			    .links{
+				  
+				   float:right;
+			   
+			   }
+
+			   div {
+				   
+				   
+				   padding:6px;
+			   }
 			 
-			  border-bottom:2px dotted #333;
-			  padding-down:0;
-			  margin:0;
-		  }
+			   .c1 {
+				   
+				   float:left;
+				   width:25%;
+				  <--text-align:justify;-->
+				    padding:1em;
+			   }
+			   .c2{
+				   display:block;
+				   float:left;
+				    width:30%;
+				    border-left:1.5px dashed #333;
+				  overflow:auto;
+				    <!--text-align:justify;-->
+				    padding:3em;
+				    text-align:left;
+			   } 
+			   
+			   .c3 {display:block;
+				    padding:20px;
+				   	margin-top: 6px;
+				   	margin-bottom: 7px;
+				   float:right;
+			 height: 245px;
+			    width: 38%;
+		         
+				   border: 3px solid #99994d;background-color: #FFF8DC;
+				   
+			   }
 
-	 
+			   .group
+			   {
+			   	border-bottom: 1.5px dashed black;
+			   	height: 300px;
+			   }
+			   .rd1{
+			   	float: right;
+			   	padding-right: 20px;
+			   	color:#000000;
+
+			   }
+			   .rd2{
+			   	float: right;
+			   	padding-right: 20px;
+			   	color:#000000;
+
+			   }
+			   .c4
+			   {
+			   	float: right;
+			   }
+			   .gap1
+			   {
+                  padding-left: 18px;
+                  padding-right: 7px;
+			   }
+			   
+			   h3{
+				   
+				 color:green;
+				 padding:0;
+				 margin:0;
+				   
+			   }
+			 p{
+				  font-size: 11px;
+				  padding:0;
+				  margin:0;
+			  }
+			  a
+			  {
+			  	color: black;
+			  	text-decoration: none;
+			  }
+			  li
+			  {
+				  width: 70%;
+			     text-align: center;
+				  padding-bottom: 4px;
+				  list-style-image: url('bullet.png');
+			  }
+			  
+
+			 .banner_image {
+					   
+					  border-top:2px dashed #333;
+					   padding: 15px;
+					   border-bottom:1.5px dashed #333;
+				   }
+				   .why_html{
+					 
+					  border-bottom:1.5px dashed #333;
+					  padding-down:0;
+					  margin:0;
+				  }
+
