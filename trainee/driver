@@ -50,3 +50,58 @@ public class test {
                driver.quit();
     }
 }
+----------------------------------------------------------------------------------------------------------------------------
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.concurrent.TimeUnit;
+
+public class test {
+
+
+    public static void main(String[] args) throws  InterruptedException
+    {
+        System.setProperty("webdriver.chrome.driver","//home//nelson//chrome driver//chromedriver");
+
+        WebDriver drivers=new ChromeDriver();
+        drivers.manage().window().maximize();
+
+        drivers.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        drivers.get("http://freecrm.com");
+        String a=drivers.getCurrentUrl();
+
+        System.out.println("current url="+a);
+        String aa=drivers.getPageSource();
+        int b= aa.length();
+        System.out.println("total page length="+b);
+        String bb = drivers.getTitle();
+        System.out.println("title is  "+bb);
+
+         int cc=bb.length();
+         System.out.println("title lenth is "+cc);
+        drivers.findElement(By.name("username")).sendKeys("balaji3257");
+        Thread.sleep(1000);
+        drivers.findElement(By.name("password")).sendKeys("12356");
+        Thread.sleep(1000);
+        drivers.findElement(By.xpath("//input[@value='Login' and @class='btn btn-small']")).click();
+        Thread.sleep(3000);
+        drivers.findElement(By.xpath("//a[@title='New Company']"));
+        Thread.sleep(1000);
+        drivers.findElement(By.xpath("//input[@id='company_name']")).sendKeys("pramati technologies");
+        Thread.sleep(1000);
+        drivers.findElement(By.xpath("//input[@name='industry']")).sendKeys("information technology");
+        
+        drivers.navigate().forward();
+        Thread.sleep(1000);
+        drivers.navigate().forward();
+        Thread.sleep(1000);
+        drivers.navigate().refresh();
+        Thread.sleep(1000);
+        drivers.quit();
+
+    }
+}
