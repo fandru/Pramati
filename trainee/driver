@@ -105,3 +105,79 @@ public class test {
 
     }
 }
+import com.sun.security.ntlm.Client;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+public class test {
+
+
+    public static void main(String[] args) throws  InterruptedException
+    {
+        System.setProperty("webdriver.chrome.driver","//home/nelson//chrome driver//chromedriver");
+        WebDriver drivers= new ChromeDriver();
+        drivers.manage().window().maximize();
+        drivers.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        drivers.get("http://freecrm.com");
+        String a=drivers.getCurrentUrl();
+        System.out.println("current url="+a);
+        String aa=drivers.getPageSource();
+        int b= aa.length();
+        System.out.println("total page length="+b);
+        String bb = drivers.getTitle();
+        System.out.println("title is  "+bb);
+        int cc=bb.length();
+        System.out.println("title length is "+cc);
+        drivers.findElement(By.name("username")).sendKeys("balaji3257");
+        Thread.sleep(1000);
+        drivers.findElement(By.name("password")).sendKeys("123456");
+        Thread.sleep(1000);
+        drivers.findElement(By.xpath("//input[@value='Login' and @class='btn btn-small']")).click();
+        List <WebElement> var;
+        var=drivers.findElements(By.xpath("//td[@class='calendarcell'])[30]"));
+        for (int i=0;i<var.size();i++)
+        {
+
+            System.out.println(var.get(i).getText());
+
+            if (var.get(i).getText()=="30");
+            {
+                System.out.println(var.get(i).getText());
+            }
+
+        }
+        Actions action = new Actions(drivers);
+        drivers.switchTo().frame("mainpanel");
+        WebElement we = drivers.findElement(By.xpath("//a[@title='Companies']"));
+        action.moveToElement(we).build().perform();
+        drivers.findElement(By.xpath("//a[@title='New Company']")).click();
+        Thread.sleep(3000);
+        drivers.findElement(By.xpath("//input[@id='company_name']")).sendKeys("pramati technologies");
+        Thread.sleep(4000);
+        drivers.findElement(By.xpath("//input[@name='industry']")).sendKeys("information technology");
+        Thread.sleep(1000);
+        Select dropdown = new Select(drivers.findElement(By.xpath("//select[@name='status']")));
+        dropdown.selectByVisibleText("Inactive");
+
+     Thread.sleep(3000);Select dro=new Select(drivers.findElement(By.xpath("//select[@name='category']")));
+        dro.selectByVisibleText("Partner");
+        we = drivers.findElement(By.xpath("//a[@title='Companies']"));
+        action.moveToElement(we).build().perform();
+     drivers.findElement(By.xpath("//a[@title='Combined Form']")).click();
+
+ we = drivers.findElement(By.xpath("//input[@name='receive_email'][2]"));
+ we.click();
+     we = drivers.findElement(By.xpath("//a[@title='Call']"));
+     action.moveToElement(we).build().perform();
+      drivers.findElement(By.xpath("//a[@title='New Call']")).click();
+    }
+}
