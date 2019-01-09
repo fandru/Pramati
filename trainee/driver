@@ -181,3 +181,81 @@ public class test {
       drivers.findElement(By.xpath("//a[@title='New Call']")).click();
     }
 }
+
+
+import com.sun.deploy.util.SyncAccess;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+public class constant {
+
+    public static void main(String args[]) throws InterruptedException
+    {
+        System.setProperty("webdriver.chrome.driver","//home//nelson//chromedriver");
+
+        WebDriver driver =new ChromeDriver();
+        driver.get("https://www.snapdeal.com/");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//*[@class='accountInner']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//*[@class='accountBtn btn rippleWhite']")).click();
+        driver.switchTo().frame("iframeLogin");
+         Thread.sleep(1000);
+        driver.findElement(By.xpath("//input[@id='userName']")).sendKeys("8807425348");
+        driver.findElement(By.xpath("//button[@id='checkUser']")).click();
+        driver.findElement(By.xpath("//input[@id='j_password_login_uc']")).sendKeys("nelsonraj@1");
+        driver.findElement(By.xpath("//button[@id='submitLoginUC']")).click();
+        driver.findElement(By.xpath("//input[@class='col-xs-20 searchformInput keyword']")).sendKeys("sony 310ap");
+        driver.findElement(By.xpath("//span[@class='searchTextSpan']")).click();
+        String addcart = driver.findElement(By.xpath("(//p[@class='product-title'])[1]")).getText();
+        System.out.println("VALUE IS"+addcart);
+        driver.findElement(By.xpath("(//p[@class='product-title'])[1]")).click();
+        Thread.sleep(5000);
+
+        Set<String> handles = driver.getWindowHandles();
+        System.out.println(handles);
+
+
+        for(String x : handles){
+            String currentHandle = driver.getWindowHandle();
+            System.out.println("Current Windows is = "+currentHandle);
+            if(x!=currentHandle){
+                driver.switchTo().window(x);
+            }
+        }
+
+        if(driver.findElement(By.xpath("//span[@class='intialtext' and text()='add to cart']")).isDisplayed())
+            driver.findElement(By.xpath("//span[@class='intialtext' and text()='add to cart']")).click();
+        else
+            System.out.println("False");
+        //driver.findElement(By.xpath("//div[@class='btn btn-theme-secondary open-cart']")).click();
+
+        String viewcart=driver.findElement(By.xpath("(//a[@class='cart-link'])[2]")).getText();
+        System.out.println("VALUE IS"+viewcart);
+        if (addcart.contentEquals(viewcart))
+        {
+            System.out.println("OPERATION PASS");
+        }
+        else
+        {
+            System.out.println("OPERATION FAILS");
+        }
+        driver.findElement(By.xpath("//div[@class='menuIconBar']"));
+//        driver.findElement(By.xpath("//button[@id='make-payment']")).click();
+  //      driver.findElement(By.xpath("//input[@placeholder='Card Number']")).sendKeys("1235456776869709");
+       // driver.findElement(By.xpath("//div[@id='CS2']")).click();
+        //driver.findElement(By.xpath("//ul[@data-cs='CS3']//li[@rel='21'']]")).click();
+//        driver.findElement(By.xpath("//div[@class='styledSelect sd-icon-expand-arrow card_exp_year_custom customized']")).click();
+  //      driver.findElement(By.xpath("")).click();
+
+    }
+}
+
+
+
