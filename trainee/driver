@@ -1,261 +1,224 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+                                     SELENIUM WEBDRIVER AUTOMATION CODE
+------------------------------------------------------------------------------------------------------------------------
 
-import java.util.concurrent.TimeUnit;
-
+* A BROWSER[CHROME] AUTOMATION CODE USING SELENIUM WEBDRIVER
+import org.openqa.selenium.By; 
+import org.openqa.selenium.WebDriver; 
+import org.openqa.selenium.chrome.ChromeDriver; 
+import java.util.concurrent.TimeUnit; 
 public class test {
+public static void main(String[] args)throws  InterruptedException {
+System.setProperty("webdriver.chrome.driver", "//home//nelson//chrome driver//chromedriver");
+WebDriver driver = new ChromeDriver(); 
+driver.get("https://freecrm.com");
+driver.manage().window().maximize(); 
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+Thread.sleep(2000); 
+driver.findElement(By.name("username")).sendKeys("balaji3257"); 
+Thread.sleep(2000); 
+driver.findElement(By.name("password")).sendKeys("123456"); 
+Thread.sleep(2000); 
+driver.findElement(By.xpath("//input[@value='Login' and @class=\"btn btn-small\"]")).click();
+driver.switchTo().frame("mainpanel"); 
+driver.findElement(By.name("company_name")).sendKeys("PRAMATI TECHNOLOGIES"); 
+driver.findElement(By.name("contact_first_name")).sendKeys("FNELSON"); 
+driver.findElement(By.name("contact_surname")).sendKeys("ANBURAJ"); 
+//driver.findElement(By.xpath("//input[@class=\"button\"][5]")).click();
+driver.findElement(By.xpath("//a[@title='Companies']"));
+driver.findElement(By.xpath("//input[@name=\"cs_name\"]")).sendKeys("pramati");
+driver.findElement(By.xpath("//input[@name=\"cs_industry\"]")).sendKeys("IT");
+driver.findElement(By.xpath("//input[@name=\"cs_annual_revenue\"]")).sendKeys("solamatan");
+driver.findElement(By.xpath("//input[@name=\"cs_num_of_employees\"]")).sendKeys("1200");
+driver.findElement(By.xpath("//input[@name=\"cs_status\"]")).click();
+driver.findElement(By.xpath("//option[@value=\"Active\"]"));
+Thread.sleep(10000); 
+driver.findElement(By.xpath("(//a[@class='topnavlink' ])[3]/i")).click();
+driver.quit(); 
+}
+}
+
+----------------------------------------------------------------------------------------------------------------------------
+
+* A BROWSER[CHROME] AUTOMATION CODE USING SELENIUM WEBDRIVER -BROWSER NAVIGATION
 
 
-    public static void main(String[] args) throws  InterruptedException
-    {
-        System.setProperty("webdriver.chrome.driver","//home//nelson//chrome driver//chromedriver");
-         WebDriver driver = new ChromeDriver();
-         driver.get("https://freecrm.com");
-         driver.manage().window().maximize();
-         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-        Thread.sleep(2000);
-        driver.findElement(By.name("username")).sendKeys("balaji3257");
-
-        Thread.sleep(2000);
-        driver.findElement(By.name("password")).sendKeys("123456");
-
-
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@value='Login' and @class=\"btn btn-small\"]")).click();
-
-        driver.switchTo().frame("mainpanel");
-
-         driver.findElement(By.name("company_name")).sendKeys("PRAMATI TECHNOLOGIES");
-         driver.findElement(By.name("contact_first_name")).sendKeys("FNELSON");
-         driver.findElement(By.name("contact_surname")).sendKeys("ANBURAJ");
-         //driver.findElement(By.xpath("//input[@class=\"button\"][5]")).click();
-         driver.findElement(By.xpath("//a[@title='Companies']"));
-          driver.findElement(By.xpath("//input[@name=\"cs_name\"]")).sendKeys("pramati");
-          driver.findElement(By.xpath("//input[@name=\"cs_industry\"]")).sendKeys("IT");
-          driver.findElement(By.xpath("//input[@name=\"cs_annual_revenue\"]")).sendKeys("solamatan");
-          driver.findElement(By.xpath("//input[@name=\"cs_num_of_employees\"]")).sendKeys("1200");
-         driver.findElement(By.xpath("//input[@name=\"cs_status\"]")).click();
-        driver.findElement(By.xpath("//option[@value=\"Active\"]"));
-
-        Thread.sleep(10000);
-
-
-        driver.findElement(By.xpath("(//a[@class='topnavlink' ])[3]/i")).click();
-
-
-
-
-               driver.quit();
-    }
+import org.openqa.selenium.By; 
+import org.openqa.selenium.WebDriver; 
+import org.openqa.selenium.chrome.ChromeDriver; 
+import java.util.concurrent.TimeUnit; 
+public class test {
+public static void main(String[] args)throws  InterruptedException {
+System.setProperty("webdriver.chrome.driver", "//home//nelson//chrome driver//chromedriver");
+WebDriver drivers = new ChromeDriver(); 
+drivers.manage().window().maximize(); 
+drivers.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+drivers.get("http://freecrm.com");
+String a = drivers.getCurrentUrl(); 
+System.out.println("current url=" + a); 
+String aa = drivers.getPageSource(); 
+int b = aa.length(); 
+System.out.println("total page length=" + b); 
+String bb = drivers.getTitle(); 
+System.out.println("title is  " + bb); 
+int cc = bb.length(); 
+System.out.println("title lenth is " + cc); 
+drivers.findElement(By.name("username")).sendKeys("balaji3257"); 
+Thread.sleep(1000); 
+drivers.findElement(By.name("password")).sendKeys("12356"); 
+Thread.sleep(1000); 
+drivers.findElement(By.xpath("//input[@value='Login' and @class='btn btn-small']")).click();
+Thread.sleep(3000); 
+drivers.findElement(By.xpath("//a[@title='New Company']"));
+Thread.sleep(1000); 
+drivers.findElement(By.xpath("//input[@id='company_name']")).sendKeys("pramati technologies");
+Thread.sleep(1000); 
+drivers.findElement(By.xpath("//input[@name='industry']")).sendKeys("information technology");
+drivers.navigate().forward(); 
+Thread.sleep(1000); 
+drivers.navigate().forward(); 
+Thread.sleep(1000); 
+drivers.navigate().refresh(); 
+Thread.sleep(1000); 
+drivers.quit(); 
+}
 }
 ----------------------------------------------------------------------------------------------------------------------------
 
-
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.concurrent.TimeUnit;
-
+      * A BROWSER[CHROME] AUTOMATION CODE USING SELENIUM WEBDRIVER -USING LIST 
+      
+import com.sun.security.ntlm.Client; 
+import org.openqa.selenium.By; 
+import org.openqa.selenium.WebDriver; 
+import org.openqa.selenium.WebElement; 
+import org.openqa.selenium.chrome.ChromeDriver; 
+import org.openqa.selenium.firefox.FirefoxDriver; 
+import org.openqa.selenium.interactions.Actions; 
+import org.openqa.selenium.support.ui.Select; 
+import org.openqa.selenium.remote.DesiredCapabilities; 
+import java.util.List; 
+import java.util.concurrent.TimeUnit; 
 public class test {
-
-
-    public static void main(String[] args) throws  InterruptedException
-    {
-        System.setProperty("webdriver.chrome.driver","//home//nelson//chrome driver//chromedriver");
-
-        WebDriver drivers=new ChromeDriver();
-        drivers.manage().window().maximize();
-
-        drivers.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        drivers.get("http://freecrm.com");
-        String a=drivers.getCurrentUrl();
-
-        System.out.println("current url="+a);
-        String aa=drivers.getPageSource();
-        int b= aa.length();
-        System.out.println("total page length="+b);
-        String bb = drivers.getTitle();
-        System.out.println("title is  "+bb);
-
-         int cc=bb.length();
-         System.out.println("title lenth is "+cc);
-        drivers.findElement(By.name("username")).sendKeys("balaji3257");
-        Thread.sleep(1000);
-        drivers.findElement(By.name("password")).sendKeys("12356");
-        Thread.sleep(1000);
-        drivers.findElement(By.xpath("//input[@value='Login' and @class='btn btn-small']")).click();
-        Thread.sleep(3000);
-        drivers.findElement(By.xpath("//a[@title='New Company']"));
-        Thread.sleep(1000);
-        drivers.findElement(By.xpath("//input[@id='company_name']")).sendKeys("pramati technologies");
-        Thread.sleep(1000);
-        drivers.findElement(By.xpath("//input[@name='industry']")).sendKeys("information technology");
-        
-        drivers.navigate().forward();
-        Thread.sleep(1000);
-        drivers.navigate().forward();
-        Thread.sleep(1000);
-        drivers.navigate().refresh();
-        Thread.sleep(1000);
-        drivers.quit();
-
-    }
+public static void main(String[] args)throws  InterruptedException {
+System.setProperty("webdriver.chrome.driver", "//home/nelson//chrome driver//chromedriver");
+WebDriver drivers = new ChromeDriver(); 
+drivers.manage().window().maximize(); 
+drivers.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+drivers.get("http://freecrm.com");
+String a = drivers.getCurrentUrl(); 
+System.out.println("current url=" + a); 
+String aa = drivers.getPageSource(); 
+int b = aa.length(); 
+System.out.println("total page length=" + b); 
+String bb = drivers.getTitle(); 
+System.out.println("title is  " + bb); 
+int cc = bb.length(); 
+System.out.println("title length is " + cc); 
+drivers.findElement(By.name("username")).sendKeys("balaji3257"); 
+Thread.sleep(1000); 
+drivers.findElement(By.name("password")).sendKeys("123456"); 
+Thread.sleep(1000); 
+drivers.findElement(By.xpath("//input[@value='Login' and @class='btn btn-small']")).click();
+List < WebElement > var; 
+var = drivers.findElements(By.xpath("//td[@class='calendarcell'])[30]"));
+for (int i = 0; i < var.size(); i +  + ) {
+System.out.println(var.get(i).getText()); 
+if (var.get(i).getText() == "30");  {
+System.out.println(var.get(i).getText()); 
 }
-import com.sun.security.ntlm.Client;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-public class test {
-
-
-    public static void main(String[] args) throws  InterruptedException
-    {
-        System.setProperty("webdriver.chrome.driver","//home/nelson//chrome driver//chromedriver");
-        WebDriver drivers= new ChromeDriver();
-        drivers.manage().window().maximize();
-        drivers.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        drivers.get("http://freecrm.com");
-        String a=drivers.getCurrentUrl();
-        System.out.println("current url="+a);
-        String aa=drivers.getPageSource();
-        int b= aa.length();
-        System.out.println("total page length="+b);
-        String bb = drivers.getTitle();
-        System.out.println("title is  "+bb);
-        int cc=bb.length();
-        System.out.println("title length is "+cc);
-        drivers.findElement(By.name("username")).sendKeys("balaji3257");
-        Thread.sleep(1000);
-        drivers.findElement(By.name("password")).sendKeys("123456");
-        Thread.sleep(1000);
-        drivers.findElement(By.xpath("//input[@value='Login' and @class='btn btn-small']")).click();
-        List <WebElement> var;
-        var=drivers.findElements(By.xpath("//td[@class='calendarcell'])[30]"));
-        for (int i=0;i<var.size();i++)
-        {
-
-            System.out.println(var.get(i).getText());
-
-            if (var.get(i).getText()=="30");
-            {
-                System.out.println(var.get(i).getText());
-            }
-
-        }
-        Actions action = new Actions(drivers);
-        drivers.switchTo().frame("mainpanel");
-        WebElement we = drivers.findElement(By.xpath("//a[@title='Companies']"));
-        action.moveToElement(we).build().perform();
-        drivers.findElement(By.xpath("//a[@title='New Company']")).click();
-        Thread.sleep(3000);
-        drivers.findElement(By.xpath("//input[@id='company_name']")).sendKeys("pramati technologies");
-        Thread.sleep(4000);
-        drivers.findElement(By.xpath("//input[@name='industry']")).sendKeys("information technology");
-        Thread.sleep(1000);
-        Select dropdown = new Select(drivers.findElement(By.xpath("//select[@name='status']")));
-        dropdown.selectByVisibleText("Inactive");
-
-     Thread.sleep(3000);Select dro=new Select(drivers.findElement(By.xpath("//select[@name='category']")));
-        dro.selectByVisibleText("Partner");
-        we = drivers.findElement(By.xpath("//a[@title='Companies']"));
-        action.moveToElement(we).build().perform();
-     drivers.findElement(By.xpath("//a[@title='Combined Form']")).click();
-
- we = drivers.findElement(By.xpath("//input[@name='receive_email'][2]"));
- we.click();
-     we = drivers.findElement(By.xpath("//a[@title='Call']"));
-     action.moveToElement(we).build().perform();
-      drivers.findElement(By.xpath("//a[@title='New Call']")).click();
-    }
+}
+Actions action = new Actions(drivers); 
+drivers.switchTo().frame("mainpanel"); 
+WebElement we = drivers.findElement(By.xpath("//a[@title='Companies']"));
+action.moveToElement(we).build().perform(); 
+drivers.findElement(By.xpath("//a[@title='New Company']")).click();
+Thread.sleep(3000); 
+drivers.findElement(By.xpath("//input[@id='company_name']")).sendKeys("pramati technologies");
+Thread.sleep(4000); 
+drivers.findElement(By.xpath("//input[@name='industry']")).sendKeys("information technology");
+Thread.sleep(1000); 
+Select dropdown = new Select(drivers.findElement(By.xpath("//select[@name='status']")));
+dropdown.selectByVisibleText("Inactive"); 
+Thread.sleep(3000); Select dro = new Select(drivers.findElement(By.xpath("//select[@name='category']")));
+dro.selectByVisibleText("Partner"); 
+we = drivers.findElement(By.xpath("//a[@title='Companies']"));
+action.moveToElement(we).build().perform(); 
+drivers.findElement(By.xpath("//a[@title='Combined Form']")).click();
+we = drivers.findElement(By.xpath("//input[@name='receive_email'][2]"));
+we.click(); 
+we = drivers.findElement(By.xpath("//a[@title='Call']"));
+action.moveToElement(we).build().perform(); 
+drivers.findElement(By.xpath("//a[@title='New Call']")).click();
+}
 }
 
 
-import com.sun.deploy.util.SyncAccess;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
+--------------------------------------------------------------------------------------------------------------------------
 
+
+      * A BROWSER[CHROME] AUTOMATION CODE USING SELENIUM WEBDRIVER -USING REAL TIME WEBSITE ALSO VALIDATING THE PRODUCT 
+
+
+
+import com.sun.deploy.util.SyncAccess; 
+import org.openqa.selenium.By; 
+import org.openqa.selenium.WebDriver; 
+import org.openqa.selenium.chrome.ChromeDriver; 
+import java.util.Set; 
+import java.util.concurrent.TimeUnit; 
 public class constant {
-
-    public static void main(String args[]) throws InterruptedException
-    {
-        System.setProperty("webdriver.chrome.driver","//home//nelson//chromedriver");
-
-        WebDriver driver =new ChromeDriver();
-        driver.get("https://www.snapdeal.com/");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//*[@class='accountInner']")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//*[@class='accountBtn btn rippleWhite']")).click();
-        driver.switchTo().frame("iframeLogin");
-         Thread.sleep(1000);
-        driver.findElement(By.xpath("//input[@id='userName']")).sendKeys("8807425348");
-        driver.findElement(By.xpath("//button[@id='checkUser']")).click();
-        driver.findElement(By.xpath("//input[@id='j_password_login_uc']")).sendKeys("nelsonraj@1");
-        driver.findElement(By.xpath("//button[@id='submitLoginUC']")).click();
-        driver.findElement(By.xpath("//input[@class='col-xs-20 searchformInput keyword']")).sendKeys("sony 310ap");
-        driver.findElement(By.xpath("//span[@class='searchTextSpan']")).click();
-        String addcart = driver.findElement(By.xpath("(//p[@class='product-title'])[1]")).getText();
-        System.out.println("VALUE IS"+addcart);
-        driver.findElement(By.xpath("(//p[@class='product-title'])[1]")).click();
-        Thread.sleep(5000);
-
-        Set<String> handles = driver.getWindowHandles();
-        System.out.println(handles);
-
-
-        for(String x : handles){
-            String currentHandle = driver.getWindowHandle();
-            System.out.println("Current Windows is = "+currentHandle);
-            if(x!=currentHandle){
-                driver.switchTo().window(x);
-            }
-        }
-
-        if(driver.findElement(By.xpath("//span[@class='intialtext' and text()='add to cart']")).isDisplayed())
-            driver.findElement(By.xpath("//span[@class='intialtext' and text()='add to cart']")).click();
-        else
-            System.out.println("False");
-        //driver.findElement(By.xpath("//div[@class='btn btn-theme-secondary open-cart']")).click();
-
-        String viewcart=driver.findElement(By.xpath("(//a[@class='cart-link'])[2]")).getText();
-        System.out.println("VALUE IS"+viewcart);
-        if (addcart.contentEquals(viewcart))
-        {
-            System.out.println("OPERATION PASS");
-        }
-        else
-        {
-            System.out.println("OPERATION FAILS");
-        }
-        driver.findElement(By.xpath("//div[@class='menuIconBar']"));
-//        driver.findElement(By.xpath("//button[@id='make-payment']")).click();
-  //      driver.findElement(By.xpath("//input[@placeholder='Card Number']")).sendKeys("1235456776869709");
-       // driver.findElement(By.xpath("//div[@id='CS2']")).click();
-        //driver.findElement(By.xpath("//ul[@data-cs='CS3']//li[@rel='21'']]")).click();
-//        driver.findElement(By.xpath("//div[@class='styledSelect sd-icon-expand-arrow card_exp_year_custom customized']")).click();
-  //      driver.findElement(By.xpath("")).click();
-
-    }
+public static void main(String args[])throws InterruptedException {
+System.setProperty("webdriver.chrome.driver", "//home//nelson//chromedriver");
+WebDriver driver = new ChromeDriver(); 
+driver.get("https://www.snapdeal.com/");
+driver.manage().window().maximize(); 
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+Thread.sleep(1000); 
+driver.findElement(By.xpath("//*[@class='accountInner']")).click();
+Thread.sleep(1000); 
+driver.findElement(By.xpath("//*[@class='accountBtn btn rippleWhite']")).click();
+driver.switchTo().frame("iframeLogin"); 
+Thread.sleep(1000); 
+driver.findElement(By.xpath("//input[@id='userName']")).sendKeys("8807425348");
+driver.findElement(By.xpath("//button[@id='checkUser']")).click();
+driver.findElement(By.xpath("//input[@id='j_password_login_uc']")).sendKeys("nelsonraj@1");
+driver.findElement(By.xpath("//button[@id='submitLoginUC']")).click();
+driver.findElement(By.xpath("//input[@class='col-xs-20 searchformInput keyword']")).sendKeys("sony 310ap");
+driver.findElement(By.xpath("//span[@class='searchTextSpan']")).click();
+String addcart = driver.findElement(By.xpath("(//p[@class='product-title'])[1]")).getText();
+System.out.println("VALUE IS" + addcart); 
+driver.findElement(By.xpath("(//p[@class='product-title'])[1]")).click();
+Thread.sleep(5000); 
+Set < String > handles = driver.getWindowHandles(); 
+System.out.println(handles); 
+for (String x:handles) {
+String currentHandle = driver.getWindowHandle(); 
+System.out.println("Current Windows is = " + currentHandle); 
+if (x != currentHandle) {
+driver.switchTo().window(x); 
 }
-
-
+}
+if (driver.findElement(By.xpath("//span[@class='intialtext' and text()='add to cart']")).isDisplayed())
+driver.findElement(By.xpath("//span[@class='intialtext' and text()='add to cart']")).click();
+else
+            System.out.println("False"); 
+String viewcart = driver.findElement(By.xpath("(//a[@class='cart-link'])[2]")).getText();
+System.out.println("VALUE IS" + viewcart); 
+if (addcart.contentEquals(viewcart)) {
+System.out.println("OPERATION PASS"); 
+}
+else {
+System.out.println("OPERATION FAILS"); 
+}
+driver.findElement(By.xpath("//div[@class='menuIconBar']"));
+}
+}
+/*driver.findElement(By.xpath("//div[@class='btn btn-theme-secondary open-cart']")).click();
+driver.findElement(By.xpath("//button[@id='make-payment']")).click();
+driver.findElement(By.xpath("//input[@placeholder='Card Number']")).sendKeys("1235456776869709");
+driver.findElement(By.xpath("//div[@id='CS2']")).click();
+driver.findElement(By.xpath("//ul[@data-cs='CS3']//li[@rel='21'']]")).click();
+driver.findElement(By.xpath("//div[@class='styledSelect sd-icon-expand-arrow card_exp_year_custom customized']")).click();
+driver.findElement(By.xpath("")).click(); 
+*/
 
