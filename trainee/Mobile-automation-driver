@@ -1,0 +1,83 @@
+                                Mobile automation code 
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
+
+
+public class FirstAppium
+{
+
+    WebDriver driver;
+
+    @BeforeSuite
+    public void setUp() throws MalformedURLException {
+        // Created object of DesiredCapabilities class.
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+
+        // Set android deviceName desired capability. Set your device name.
+        capabilities.setCapability("deviceName", "ZX1G4285NR");
+
+
+        // Set BROWSER_NAME desired capability. It's Android in our case here.
+        capabilities.setCapability(CapabilityType.PLATFORM, "Android");
+
+        // Set android VERSION desired capability. Set your mobile device's OS version.
+        capabilities.setCapability(CapabilityType.VERSION, "7.1.1");
+
+        // Set android platformName desired capability. It's Android in our case here.
+        capabilities.setCapability("platformName", "Android");
+
+        // Set android appPackage desired capability. It is
+        // com.android.calculator2 for calculator application.
+        // Set your application's appPackage if you are using any other app.
+        capabilities.setCapability("appPackage", "com.geonaute.geonaute");
+
+        // Set android appActivity desired capability. It is
+        // com.android.calculator2.Calculator for calculator application.
+        // Set your application's appPackage if you are using any other app.
+        capabilities.setCapability("appActivity", "com.geonaute.mygeonaute.activities.StartActivity");
+
+        // Created object of RemoteWebDriver will all set capabilities.
+        // Set appium server address and port number in URL string.
+        // It will launch calculator app in android device.
+        driver = new RemoteWebDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+    }
+
+    @Test
+    public void playstore() {
+
+        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+        // Click on DELETE/CLR button to clear result text box before running test.
+        driver.findElement(By.className("android.widget.TextView"));
+
+        driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+
+        driver.findElement(By.id("com.geonaute.geonaute:id/connect_login")).click();
+
+        driver.findElement(By.id("email")).sendKeys("nelson.anburaj@imaginea.com");
+
+        driver.findElement(By.id("password")).sendKeys("nelsonraj@1");
+
+        driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.SlidingPaneLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[4]/android.view.View/android.view.View[7]/android.widget.Button")).click();
+    }
+
+    @AfterSuite
+    public void End() {
+        driver.quit();
+    }
+}
