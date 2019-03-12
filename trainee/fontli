@@ -1,0 +1,173 @@
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+import io.qameta.allure.Attachment;
+import io.qameta.allure.Description;
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
+public class FirstAppium
+{
+
+    AndroidDriver<MobileElement> driver = null;
+    WebDriverWait wait;
+
+
+
+
+    @BeforeMethod
+    public void setUp() throws MalformedURLException {
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("deviceName", "ZX1G4285NR");
+        capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability("appPackage", "com.imaginea.fontli");
+        capabilities.setCapability("appActivity", "com.imaginea.fontli.screens.LoginActivity");
+        capabilities.setCapability("automatioName","UiAutomator2");
+        driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+        wait = new WebDriverWait(driver, 10);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+    }
+
+    @Test @Description("valid username valid password")@Attachment(value = "HTML attchment",type="text/html")
+
+    public void validLogin() throws InterruptedException {
+
+
+        wait.until(ExpectedConditions.visibilityOf(   driver.findElement(By.id("com.imaginea.fontli:id/mailLayout"))  )).click();
+
+        wait.until(ExpectedConditions.visibilityOf(   driver.findElement(By.id("com.imaginea.fontli:id/login_check_box")) )).click();
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/username_editText")))).sendKeys("andruarunkumar");
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/password_editText")))).sendKeys("nelsonraj@1");
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/email_sign_in_button")) )).click();
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/text5")))).click();
+
+ }
+    @Test @Description("invalid username valid password ")@Attachment(value = "HTML attchment",type="text/html")
+    public void invalidUsernameValidPassword() throws InterruptedException {
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/mailLayout")))).click();
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/login_check_box")))).click();
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/username_editText")))).sendKeys("andruarunkumr");
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/password_editText")))).sendKeys("nelsonraj@1");
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/email_sign_in_button")))).click();
+
+}
+
+    @Test @Description(" valid username invalid password")@Attachment(value = "HTML attchment",type="text/html")
+    public void validUsernameInvalidPassword() throws InterruptedException {
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/mailLayout")))).click();
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/login_check_box")))).click();
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/username_editText")))).sendKeys("andruarunkumar");
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/password_editText")))).sendKeys("nelsonraj1");
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/email_sign_in_button")))).click();
+
+    }
+    @Test @Description("forgot password")
+    @Attachment(value = "HTML attchment",type="text/html")
+    public void forgotPassword() throws InterruptedException {
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/mailLayout")))).click();
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/login_check_box")))).click();
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/txt_forgot_password")))).click();
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/edt_email")))).sendKeys("andrarunkumar@gmail.com");
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/btn_send_email")))).click();
+
+
+    }
+    @Test @Description("facebook login")@Attachment(value = "HTML attchment",type="text/html")
+    public void facebooklogin() throws InterruptedException{
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.imaginea.fontli:id/facebookLayout")))).click();
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("m_login_email")))).sendKeys("fontli@fontli.com");
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("m_login_password")))).sendKeys("Type5try");
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("u_0_5"))));
+
+
+    }
+    @Test
+    @Description(" twitterlogin")@Attachment(value = "HTML attchment",type="text/html")
+
+
+    public void twitterlogin() throws InterruptedException{
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[text()='Connect with Twitter']"))));
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.twitter.android:id/login_identifier")))).sendKeys("admin@fontli.com");
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.twitter.android:id/login_password")))).sendKeys("reset123");
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("com.twitter.android:id/login_login"))));
+    }
+
+
+
+
+    @AfterMethod
+    public void end() {
+        driver.quit();
+    }
+}
+
+
+
+
+
+
+/*
+
+1.gmail_login_valid
+2.gmail_login_invalide_username
+3.gmail_login_invalide_password
+4.gmail_forgot_password
+5.facebook_login_valid
+6.facebook_login_invalid
+7.twitter_login_valid
+8.twitter_login_invalid
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
